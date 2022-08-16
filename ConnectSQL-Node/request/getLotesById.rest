@@ -1,0 +1,2 @@
+GET http://localhost:3001/api/informacionLotes/12433328
+Content-Type: application/json
