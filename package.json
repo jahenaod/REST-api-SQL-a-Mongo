@@ -4,6 +4,7 @@
   "description": "Conection to sqlserver with nodejs",
   "main": "app.js",
   "scripts": {
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Juan Andres",
@@ -15,6 +16,7 @@
     "mongodb": "4.8.0",
     "mongoose": "6.4.4",
     "mssql": "4.2.2",
+    "nodemon": "^2.0.19",
     "tedious": "14.7.0"
   }
 }
