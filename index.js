@@ -8,12 +8,6 @@ const InformacionLotes = require('./models/lotes')
 const { request } = require('express')
 const notFound = require('./middlewares/notFound')
 const handleErrors = require('./middlewares/handleErrors')
-/*
-const app = http.createServer((request,response)=>{
-    response.writeHead(200,{ 'content-type' : 'application/json'})
-    response.end(JSON.stringify(informacionLotes))
-})
-*/
 
 app.use(express.json())
 
@@ -52,11 +46,11 @@ app.put('/api/informacionLotes/:IdLoteIP', async (request, response, next) => {
             CodigoLote: informacionLotes.CodigoLote,
             FechaCreacion: informacionLotes.FechaCreacion, //String
             Cantidad: informacionLotes.Cantidad,
-            tipoCerdo: informacionLotes.tipoCerdo,
+            TipoCerdo: informacionLotes.TipoCerdo,
             Productor: informacionLotes.Productor,
             Granja: informacionLotes.Granja,
             Comercializador: informacionLotes.Comercializador,
-            placaVehiculo: informacionLotes.placaVehiculo,
+            PlacaVehiculo: informacionLotes.PlacaVehiculo,
             Ciudad: informacionLotes.Ciudad,
             Departamento: informacionLotes.Departamento,
             Vereda: informacionLotes.Vereda,
@@ -64,26 +58,26 @@ app.put('/api/informacionLotes/:IdLoteIP', async (request, response, next) => {
             HoraLlegadaPlanta: informacionLotes.HoraLlegadaPlanta, //String
             HoraIngreso: informacionLotes.HoraIngreso, //String
             HoraSalida: informacionLotes.HoraIngreso, //String
-            numeroRemision: informacionLotes.numeroRemision,
+            NumeroRemision: informacionLotes.NumeroRemision,
             AnimalesRemisionados: informacionLotes.AnimalesRemisionados,
-            animalesPesados: informacionLotes.animalesPesados,
+            AnimalesPesados: informacionLotes.AnimalesPesados,
             PesoTotal: informacionLotes.PesoTotal,
             NroTiqueteBascula: informacionLotes.NroTiqueteBascula,
             Inmunocastrado: informacionLotes.Inmunocastrado,
             LoteDeCeba: informacionLotes.LoteDeCeba,
             HoraSalidaGranja: informacionLotes.HoraSalidaGranja,
-            agitadoTransporte: informacionLotes.agitadoTransporte,
-            caidoTransporte: informacionLotes.caidoTransporte,
-            muertoTransporte: informacionLotes.muertoTransporte,
-            muertoDesembarque: informacionLotes.muertoDesembarque,
-            agitadoCorral: informacionLotes.agitadoCorral,
-            CaidoCorral: informacionLotes.CaidoCorral,
-            muertoCorral: informacionLotes.muertoCorral,
-            muertoCorralObservacion: informacionLotes.muertoCorralObservacion,
-            enviadosSacrificioLineaNormal: informacionLotes.enviadosSacrificioLineaNormal,
-            fechaEnvioSacrificioLineaNormal: informacionLotes.fechaEnvioSacrificioLineaNormal, //String
-            enviadosSacrificioDeEmergencia: informacionLotes.enviadosSacrificioDeEmergencia,
-            fechaEnvioSacrificioEmergencia: informacionLotes.fechaEnvioSacrificioEmergencia, //String
+            AgitadoEnTransporte: informacionLotes.AgitadoEnTransporte,
+            CaidoEnTransporte: informacionLotes.CaidoEnTransporte,
+            MuertoEnTransporte: informacionLotes.MuertoEnTransporte,
+            MuertoEnDesembarque: informacionLotes.MuertoEnDesembarque,
+            AgitadoEnCorral: informacionLotes.AgitadoEnCorral,
+            CaidoEnCorral: informacionLotes.CaidoEnCorral,
+            MuertoEnCorral: informacionLotes.MuertoEnCorral,
+            MuertoEnCorralObservacion: informacionLotes.MuertoEnCorralObservacion,
+            EnviadosASacrificioLineaNormal: informacionLotes.EnviadosASacrificioLineaNormal,
+            FechaEnvioASacrificioLineaNormal: informacionLotes.FechaEnvioASacrificioLineaNormal, //String
+            EnviadosASacrificioDeEmergencia: informacionLotes.EnviadosASacrificioDeEmergencia,
+            FechaEnvioASacrificioEmergencia: informacionLotes.FechaEnvioASacrificioEmergencia, //String
             Machos: informacionLotes.Machos,
             Hembras: informacionLotes.Hembras,
             Inmunocastrados: informacionLotes.Inmunocastrados
@@ -121,11 +115,11 @@ app.post('/api/informacionLotes', (request, response) => {
         CodigoLote: informacionLotes.CodigoLote,
         FechaCreacion: new Date(informacionLotes.FechaCreacion), //String
         Cantidad: informacionLotes.Cantidad,
-        tipoCerdo: informacionLotes.tipoCerdo,
+       // TipoCerdo: informacionLotes.TipoCerdo,
         Productor: informacionLotes.Productor,
         Granja: informacionLotes.Granja,
         Comercializador: informacionLotes.Comercializador,
-        placaVehiculo: informacionLotes.placaVehiculo,
+        PlacaVehiculo: informacionLotes.PlacaVehiculo,
         Ciudad: informacionLotes.Ciudad,
         Departamento: informacionLotes.Departamento,
         Vereda: informacionLotes.Vereda,
@@ -133,26 +127,26 @@ app.post('/api/informacionLotes', (request, response) => {
         HoraLlegadaPlanta: new Date(informacionLotes.HoraLlegadaPlanta), //String
         HoraIngreso: new Date(informacionLotes.HoraIngreso), //String
         HoraSalida: new Date(informacionLotes.HoraSalida), //String
-        numeroRemision: informacionLotes.numeroRemision,
+        NumeroRemision: informacionLotes.NumeroRemision,
         AnimalesRemisionados: informacionLotes.AnimalesRemisionados,
-        animalesPesados: informacionLotes.animalesPesados,
+        AnimalesPesados: informacionLotes.AnimalesPesados,
         PesoTotal: informacionLotes.PesoTotal,
         NroTiqueteBascula: informacionLotes.NroTiqueteBascula,
         Inmunocastrado: informacionLotes.Inmunocastrado,
         LoteDeCeba: informacionLotes.LoteDeCeba,
         HoraSalidaGranja: informacionLotes.HoraSalidaGranja,
-        agitadoTransporte: informacionLotes.agitadoTransporte,
-        caidoTransporte: informacionLotes.caidoTransporte,
-        muertoTransporte: informacionLotes.muertoTransporte,
-        muertoDesembarque: informacionLotes.muertoDesembarque,
-        agitadoCorral: informacionLotes.agitadoCorral,
-        CaidoCorral: informacionLotes.CaidoCorral,
-        muertoCorral: informacionLotes.muertoCorral,
-        muertoCorralObservacion: informacionLotes.muertoCorralObservacion,
-        enviadosSacrificioLineaNormal: informacionLotes.enviadosSacrificioLineaNormal,
-        fechaEnvioSacrificioLineaNormal: new Date(informacionLotes.fechaEnvioSacrificioLineaNormal), //String
-        enviadosSacrificioDeEmergencia: informacionLotes.enviadosSacrificioDeEmergencia,
-        fechaEnvioSacrificioEmergencia: new Date(informacionLotes.fechaEnvioSacrificioEmergencia), //String
+        AgitadoEnTransporte: informacionLotes.AgitadoEnTransporte,
+        CaidoEnTransporte: informacionLotes.CaidoEnTransporte,
+        MuertoEnTransporte: informacionLotes.MuertoEnTransporte,
+        MuertoEnDesembarque: informacionLotes.MuertoEnDesembarque,
+        AgitadoEnCorral: informacionLotes.AgitadoEnCorral,
+        CaidoEnCorral: informacionLotes.CaidoEnCorral,
+        MuertoEnCorral: informacionLotes.MuertoEnCorral,
+        MuertoEnCorralObservacion: informacionLotes.MuertoEnCorralObservacion,
+        EnviadosASacrificioLineaNormal: informacionLotes.EnviadosASacrificioLineaNormal,
+        FechaEnvioASacrificioLineaNormal: new Date(informacionLotes.FechaEnvioASacrificioLineaNormal), //String
+        EnviadosASacrificioDeEmergencia: informacionLotes.EnviadosASacrificioDeEmergencia,
+        FechaEnvioASacrificioEmergencia: new Date(informacionLotes.FechaEnvioASacrificioEmergencia), //String
         Machos: informacionLotes.Machos,
         Hembras: informacionLotes.Hembras,
         Inmunocastrados: informacionLotes.Inmunocastrados
@@ -171,5 +165,5 @@ app.use(handleErrors)
 // Start the server on port 
 const PORT = 3001
 app.listen(PORT, () => {
-    console.log('Node server running on port ${PORT}');
+    console.log(`Node server running on port ${PORT}`); 
 });

@@ -6,11 +6,11 @@ const informacionLotesSchema = new Schema({
     CodigoLote: String, 
     FechaCreacion: Date, //String
     Cantidad: Number,
-    tipoCerdo: String,
+    //TipoCerdo: String,
     Productor: String,
     Granja: String,
     Comercializador: String,
-    placaVehiculo: String,
+    PlacaVehiculo: String,
     Ciudad: String,
     Departamento: String,
     Vereda: String,
@@ -18,7 +18,7 @@ const informacionLotesSchema = new Schema({
     HoraLlegadaPlanta: Date, //String
     HoraIngreso: Date, //String
     HoraSalida: Date, //String
-    numeroRemision: String,
+    NumeroRemision: String,
     AnimalesRemisionados: Number,
     animalesPesados: Number,
     PesoTotal: Number,
@@ -26,18 +26,18 @@ const informacionLotesSchema = new Schema({
     Inmunocastrado: String,
     LoteDeCeba: Number,
     HoraSalidaGranja: String,
-    agitadoTransporte: Number,
-    caidoTransporte: Number,
-    muertoTransporte: Number,
-    muertoDesembarque: Number,
-    agitadoCorral: Number,
-    CaidoCorral: Number,
-    muertoCorral: Number,
-    muertoCorralObservacion: Number,
-    enviadosSacrificioLineaNormal: Number,
-    fechaEnvioSacrificioLineaNormal: Date, //String
-    enviadosSacrificioDeEmergencia: Number,
-    fechaEnvioSacrificioEmergencia: Date, //String
+    AgitadoEnTransporte: Number,
+    CaidoEnTransporte: Number,
+    MuertoEnTransporte: Number,
+    MuertoEnDesembarque: Number,
+    AgitadoEnCorral: Number,
+    CaidoEnCorral: Number,
+    MuertoEnCorral: Number,
+    MuertoEnCorralObservacion: Number,
+    EnviadosASacrificioLineaNormal: Number,
+    FechaEnvioASacrificioLineaNormal: Date, //String
+    EnviadosASacrificioDeEmergencia: Number,
+    FechaEnvioASacrificioEmergencia: Date, //String
     Machos: Number,
     Hembras: Number,
     Inmunocastrados: Number
