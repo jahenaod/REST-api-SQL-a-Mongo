@@ -1,10 +1,11 @@
 "use strict";
+require('dotenv').config()
 
 const http = require("http");
 const mssql = require('mssql');
 
-const host = 'localhost';
-const port = 8000;
+const host = process.env.HOST;
+const port = process.env.PORT;
 
 const requestListener = function (req, res) {
     res.writeHead(200);

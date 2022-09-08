@@ -6,7 +6,7 @@ const informacionLotesSchema = new Schema({
     CodigoLote: String, 
     FechaCreacion: Date, //String
     Cantidad: Number,
-    //TipoCerdo: String,
+    TipoCerdo: String,
     Productor: String,
     Granja: String,
     Comercializador: String,

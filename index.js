@@ -115,7 +115,7 @@ app.post('/api/informacionLotes', (request, response) => {
         CodigoLote: informacionLotes.CodigoLote,
         FechaCreacion: new Date(informacionLotes.FechaCreacion), //String
         Cantidad: informacionLotes.Cantidad,
-       // TipoCerdo: informacionLotes.TipoCerdo,
+        TipoCerdo: informacionLotes.TipoCerdo,
         Productor: informacionLotes.Productor,
         Granja: informacionLotes.Granja,
         Comercializador: informacionLotes.Comercializador,
